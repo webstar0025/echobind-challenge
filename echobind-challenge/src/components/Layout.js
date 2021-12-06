@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) =>
     },
     content: {
       overflow: "auto",
-      height: "calc(100% - 90px)",
+      height: "calc(100% - 120px)",
       [theme.breakpoints.down("xs")]: {
-        height: "calc(100% - 50px)",
+        height: "calc(100% - 100px)",
       },
     },
     mainContent: {
@@ -39,7 +39,6 @@ const useStyles = makeStyles((theme) =>
       },
       [theme.breakpoints.down("xs")]: {
         padding: "0 20px",
-        height: "calc(100% - 50px)",
       },
     },
     header: {
@@ -58,7 +57,7 @@ const useStyles = makeStyles((theme) =>
       },
       [theme.breakpoints.down("xs")]: {
         padding: "0 12px",
-        height: 50,
+        height: 70,
       },
     },
   })
