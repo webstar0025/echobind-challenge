@@ -158,6 +158,21 @@ const useStyles = makeStyles((theme) =>
       display: "grid",
       gap: 8,
       gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      overflowY: "auto",
+      maxHeight: 400,
+      paddingRight: 4,
+      "&::-webkit-scrollbar": {
+        width: 8,
+        background: "#fefefe",
+        border: "1px solid #c3c6c7",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        borderRadius: 5,
+        background: "#c3c6c7",
+        "&:hover": {
+          background: "#728385",
+        },
+      },
     },
     resident: {
       display: "flex",

@@ -40,6 +40,18 @@ const useStyles = makeStyles((theme) =>
       [theme.breakpoints.down("xs")]: {
         padding: "0 20px",
       },
+      "&::-webkit-scrollbar": {
+        width: 12,
+        background: "#fefefe",
+        border: "1px solid #c3c6c7",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        borderRadius: 5,
+        background: "#c3c6c7",
+        "&:hover": {
+          background: "#728385",
+        },
+      },
     },
     header: {
       margin: "auto",
