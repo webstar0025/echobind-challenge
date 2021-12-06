@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { gql, useQuery } from "@apollo/client";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
@@ -33,6 +34,7 @@ const getLocations = gql`
 
 const HomePage = () => {
   const classes = useStyles();
+  const history = useHistory();
   const [page, setPage] = useState(1);
   const [openId, setOpenId] = useState(null);
 
@@ -76,7 +78,11 @@ const HomePage = () => {
           {openId === item.id && (
             <div className={classes.residents}>
               {item.residents.map((resident) => (
-                <div className={classes.resident} key={resident.id}>
+                <div
+                  className={classes.resident}
+                  key={resident.id}
+                  onClick={() => history.push(`/resident/${resident.id}`)}
+                >
                   <img src={resident.image} alt="resident" />
                   <Box
                     display="flex"
@@ -101,7 +107,7 @@ const HomePage = () => {
           )}
         </div>
       ))}
-      <Box display="flex" justifyContent="center">
+      <Box display="flex" justifyContent="center" mb={3}>
         <Pagination
           page={page}
           total={data.locations.info.count}

@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) =>
     },
     content: {
       overflow: "auto",
-      height: "calc(100% - 120px)",
+      height: "calc(100% - 90px)",
       [theme.breakpoints.down("xs")]: {
-        height: "calc(100% - 100px)",
+        height: "calc(100% - 70px)",
       },
     },
     mainContent: {
